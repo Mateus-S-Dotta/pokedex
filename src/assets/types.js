@@ -1,0 +1,91 @@
+export default [{
+    type: 'normal',
+    text: 'Normal',
+    color: '#E9E9E9',
+    url: 'https://pokeapi.co/api/v2/type/1/'
+}, {
+    type: 'fighting',
+    text: 'Lutador',
+    color: '#BF6422',
+    url: 'https://pokeapi.co/api/v2/type/2/'
+}, {
+    type: 'flying',
+    text: 'Voador',
+    color: '#74B2E7',
+    url: 'https://pokeapi.co/api/v2/type/3/'
+}, {
+    type: 'poison',
+    text: 'Veneno',
+    color: '#B70DF2',
+    url: 'https://pokeapi.co/api/v2/type/4/'
+}, {
+    type: 'ground',
+    text: 'Terra',
+    color: '#A66948',
+    url: 'https://pokeapi.co/api/v2/type/5/'
+}, {
+    type: 'rock',
+    text: 'Pedra',
+    color: '#594B40',
+    url: 'https://pokeapi.co/api/v2/type/6/'
+}, {
+    type: 'bug',
+    text: 'Inseto',
+    color: '#3C6930',
+    url: 'https://pokeapi.co/api/v2/type/7/'
+}, {
+    type: 'ghost',
+    text: 'Fantasma',
+    color: '#7F9AAF',
+    url: 'https://pokeapi.co/api/v2/type/8/'
+}, {
+    type: 'steel',
+    text: 'Metal',
+    color: '#B6B6B6',
+    url: 'https://pokeapi.co/api/v2/type/9/'
+}, {
+    type: 'fire',
+    text: 'Fogo',
+    color: '#FD7D24',
+    url: 'https://pokeapi.co/api/v2/type/10/'
+}, {
+    type: 'water',
+    text: 'Água',
+    color: '#3574B5',
+    url: 'https://pokeapi.co/api/v2/type/11/'
+}, {
+    type: 'grass',
+    text: 'Planta',
+    color: '#4CD038',
+    url: 'https://pokeapi.co/api/v2/type/12/'
+}, {
+    type: 'electric',
+    text: 'Eletrico',
+    color: '#FDCC3F',
+    url: 'https://pokeapi.co/api/v2/type/13/'
+}, {
+    type: 'psychic',
+    text: 'Psiquico',
+    color: '#F366B9',
+    url: 'https://pokeapi.co/api/v2/type/14/'
+}, {
+    type: 'ice',
+    text: 'Gelo',
+    color: '#B3D3F4',
+    url: 'https://pokeapi.co/api/v2/type/15/'
+}, {
+    type: 'dragon',
+    text: 'Dragão',
+    color: '#7A2221',
+    url: 'https://pokeapi.co/api/v2/type/16/'
+}, {
+    type: 'dark',
+    text: 'Escuro',
+    color: '#4A2448',
+    url: 'https://pokeapi.co/api/v2/type/17/'
+}, {
+    type: 'fairy',
+    text: 'Fada',
+    color: '#FDB9E9',
+    url: 'https://pokeapi.co/api/v2/type/18/'
+}];
