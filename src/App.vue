@@ -1,10 +1,14 @@
 <template>
   <div class="content">
-    <CardVue />
-    <CardVue />
-    <CardVue />
-    <CardVue />
-    <CardVue />
+    <CardVue pokemonId="1" />
+    <CardVue pokemonId="2" />
+    <CardVue pokemonId="3" />
+    <CardVue pokemonId="4"/>
+    <CardVue pokemonId="5"/>
+    <CardVue pokemonId="6"/>
+    <CardVue pokemonId="7"/>
+    <CardVue pokemonId="8"/>
+    <CardVue pokemonId="9"/>
   </div>
 </template>
 
@@ -20,6 +24,9 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #282828;
+}
   html {
     font-size: 62.5%;
   }

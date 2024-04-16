@@ -41,10 +41,13 @@
         iconPlay: play
       }
     },
+    props: {
+      pokemonId: String
+    },  
     methods: {
       getData: async function () {
         try {
-          const data = await axios.get('https://pokeapi.co/api/v2/pokemon/1/');
+          const data = await axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemonId}/`);
           this.pokemon = data.data;
           types.forEach(nowType => {
             this.pokemon.types.forEach(pokemonType => {
@@ -54,7 +57,7 @@
             });
           });
           this.colorStyle = this.type.length === 1 ? {
-            backgroundColor: this.type[0].color
+            backgroundImage: `linear-gradient(135deg, ${this.changeColor(this.type[0].color,50)}, ${this.type[0].color}, ${this.changeColor(this.type[0].color,-50)} 75%)`
           } : {
             backgroundImage: `linear-gradient(-45deg, ${this.type[0].color}, ${this.type[1].color} 75%)`
           };
@@ -81,7 +84,18 @@
           .catch(error => {
             console.error('Erro ao carregar o arquivo de áudio:', error);
           });
+      },
+      changeColor: function (corHex, change) {
+        let r = parseInt(corHex.substr(1, 2), 16);
+        let g = parseInt(corHex.substr(3, 2), 16);
+        let b = parseInt(corHex.substr(5, 2), 16);
+        r = Math.min(255, Math.max(0, r + change));
+        g = Math.min(255, Math.max(0, g + change));
+        b = Math.min(255, Math.max(0, b + change));
+        const newColorHex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        return newColorHex;
       }
+
     },
     created() {
       this.getData()
@@ -106,6 +120,7 @@
     overflow: hidden;
     border-radius: 4.8rem;
     padding: 1.6rem;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);;
   }
 
   .images {
@@ -146,7 +161,8 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 17rem;
-    padding-bottom: 0.8rem;;
+    padding-bottom: 0.8rem;
+    ;
   }
 
   .imgIcon {
@@ -178,7 +194,7 @@
     font-size: 1.6rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 450px) {
     h1 {
       font-size: 2.4rem;
     }
